@@ -4,33 +4,148 @@
   box-sizing: border-box;
 }
 :root {
+  --background-color-main: #14120b;
 }
 body {
-  font-family:
-    "CusrorGothic Fallback", "system-ui", "Helvetica Neue", "Arial",
-    "sans-serif";
-  background-color: #14120b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color-main);
   color: #edecec;
+  padding: 1px 150px;
 
+
+  /* navbar section */
   nav {
-    border: 2px red solid;
-    height: 6dvh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-      border: 2px red solid;
-      padding: 15px;
-      width: 50dvh;
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
+    /* border: 2px red solid; */
+    height: 56px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 20px ;
+    gap: 20px;
 
     .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .svg {
+        padding-left: 5px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+      }
+      .logo {
+        border-radius: 20px;
+        height: 40px;
+      }
+    }
+
+    .ul-div {
+      /* border: 2px blue solid; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    ul {
+      /* border: 2px blue solid; */
+      width: 35dvh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    .sign-download {
+      width: 20dvh;
+      /* border: 2px blue solid; */
+      padding: 1px 12px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .sign-in {
+      font-size: 1.3rem;
+      background-color: var(--background-color-main);
+      border: 0.1em rgb(63, 61, 61) solid;
+      border-radius: 15px;
+      color: #edecec;
+      padding: 5px 11px;
+    }
+
+    .download {
+      font-size: 1.3rem;
+      background-color: #edecec;
+      border-radius: 20px;
+      color: #000000;
+      padding: 6px 11px;
     }
   }
+
+  /* first row section */
+  .hero-section {
+    /* border: 2px red solid; */
+    .container {
+      padding-bottom: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 150px;
+    }
+
+    .text-section {
+      /* border: 2px blue solid; */
+      height: 200px;
+
+      .h1-text {
+        color: white;
+        line-height: 1.1;
+      }
+      h1 {
+        font-weight: 450;
+        font-size: 2.5rem;
+        word-spacing: -1px;
+      }
+
+      #window-download-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        border-radius: 30px;
+        background-color: #edecec;
+        padding: 7px 30px;
+        font-weight: 520;
+        font-size: 15px;
+
+        span {
+          img {
+            width: 30px;
+          }
+          padding-top: 3px;
+        }
+      }
+    }
+
+    .backgroundImg1 {
+      padding: 25px;
+      background-image: url("assets/asset-cc24ca462279ca23250c.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      #Img2 {
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img {
+          width: 80%;
+          padding: 60px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  /* second row section */
 }
